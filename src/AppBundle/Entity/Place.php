@@ -83,5 +83,4 @@ class Place
     {
         $this->prices = $prices;
     }
-
 }
