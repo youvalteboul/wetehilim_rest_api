@@ -1,0 +1,36 @@
+AppBundle\Entity\Place:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: name
+    properties:
+        name:
+            - NotBlank: ~
+            - Type: string
+        address:
+            - NotBlank: ~
+            - Type: string
+
+AppBundle\Entity\User:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: email
+    properties:
+        firstname:
+            - NotBlank: ~
+            - Type: string
+        lastname:
+            - NotBlank: ~
+            - Type: string
+        email:
+            - NotBlank: ~
+            - Email: ~
+
+AppBundle\Entity\Price:
+    properties:
+        type:
+            - NotNull: ~
+            - Choice:
+                choices: [less_than_12, for_all]
+        value:
+            - NotNull: ~
+            - Type: numeric
+            - GreaterThanOrEqual:
+                value: 0
