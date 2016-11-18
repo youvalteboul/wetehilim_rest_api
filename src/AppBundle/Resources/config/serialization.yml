@@ -20,3 +20,43 @@ AppBundle\Entity\Price:
             groups: ['place', 'price']
         place:
             groups: ['price']
+
+AppBundle\Entity\Psalm:
+    attributes:
+        id:
+            groups: ['psalm', 'verse']
+        number:
+            groups: ['psalm', 'verse']
+        numberHebrew:
+            groups: ['psalm', 'verse']
+        meaning:
+            groups: ['psalm', 'verse']
+        timing:
+            groups: ['psalm', 'verse']
+        readingDay:
+            groups: ['psalm', 'verse']
+        theme:
+            groups: ['psalm', 'verse']
+        tags:
+            groups: ['psalm', 'verse']
+        verses:
+            groups: ['psalm']
+
+AppBundle\Entity\Verse:
+    attributes:
+        id:
+            groups: ['psalm', 'verse']
+        number:
+            groups: ['psalm', 'verse']
+        numberHebrew:
+            groups: ['psalm', 'verse']
+        verse:
+            groups: ['psalm', 'verse']
+        verseFrench:
+            groups: ['psalm', 'verse']
+        versePhonetic:
+            groups: ['psalm', 'verse']
+        comment:
+            groups: ['psalm', 'verse']
+        psalm:
+            groups: ['verse']

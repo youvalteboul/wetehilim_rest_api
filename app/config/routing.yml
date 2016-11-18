@@ -10,6 +10,14 @@ prices:
     type:     rest
     resource: AppBundle\Controller\Place\PriceController
 
+psalms:
+    type:     rest
+    resource: AppBundle\Controller\PsalmController
+
+verses:
+    type:     rest
+    resource: AppBundle\Controller\Psalm\VerseController
+
 users:
     type:     rest
     resource: AppBundle\Controller\UserController
