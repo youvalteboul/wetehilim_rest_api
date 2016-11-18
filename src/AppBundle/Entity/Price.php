@@ -97,6 +97,4 @@ class Price
     {
         $this->place = $place;
     }
-
-
 }
