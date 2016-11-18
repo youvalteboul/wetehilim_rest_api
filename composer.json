@@ -1,5 +1,6 @@
 {
     "name": "youval/wetehilim_rest_api",
+    "description": "API REST - Reading Psalms",
     "license": "proprietary",
     "type": "project",
     "autoload": {
