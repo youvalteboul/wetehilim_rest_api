@@ -8,6 +8,9 @@ AppBundle\Entity\Place:
         address:
             - NotBlank: ~
             - Type: string
+        prices:
+            - Valid: ~
+            - AppBundle\Form\Validator\Constraint\PriceTypeUnique: ~
 
 AppBundle\Entity\User:
     constraints:

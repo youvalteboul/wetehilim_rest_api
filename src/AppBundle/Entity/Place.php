@@ -35,6 +35,12 @@ class Place
      */
     protected $prices;
 
+    public function __construct()
+    {
+        $this->prices = new ArrayCollection();
+        // ...
+    }
+
     public function getId()
     {
         return $this->id;
