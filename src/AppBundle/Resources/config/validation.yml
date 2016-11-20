@@ -25,6 +25,12 @@ AppBundle\Entity\User:
         email:
             - NotBlank: ~
             - Email: ~
+        plainPassword:
+            - NotBlank: { groups: [New, FullUpdate] }
+            - Type: string
+            - Length:
+                min: 4
+                max: 50
 
 AppBundle\Entity\Price:
     properties:
@@ -37,3 +43,12 @@ AppBundle\Entity\Price:
             - Type: numeric
             - GreaterThanOrEqual:
                 value: 0
+
+AppBundle\Entity\Credentials:
+    properties:
+        login:
+            - NotBlank: ~
+            - Type: string
+        password:
+            - NotBlank: ~
+            - Type: string

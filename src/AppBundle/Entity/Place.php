@@ -13,6 +13,8 @@ use Doctrine\Common\Collections\ArrayCollection;
 class Place
 {
     /**
+     * Identifiant unique du lieu
+     *
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue

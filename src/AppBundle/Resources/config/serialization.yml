@@ -9,7 +9,6 @@ AppBundle\Entity\Place:
         prices:
             groups: ['place']
 
-
 AppBundle\Entity\Price:
     attributes:
         id:
@@ -60,3 +59,27 @@ AppBundle\Entity\Verse:
             groups: ['psalm', 'verse']
         psalm:
             groups: ['verse']
+
+AppBundle\Entity\User:
+    attributes:
+        id:
+            groups: ['user', 'password', 'auth-token']
+        firstname:
+            groups: ['user', 'password', 'auth-token']
+        lastname:
+            groups: ['user', 'password', 'auth-token']
+        email:
+            groups: ['user', 'password', 'auth-token']
+        password:
+            groups: ['user']
+
+AppBundle\Entity\AuthToken:
+    attributes:
+        id:
+            groups: ['auth-token']
+        value:
+            groups: ['auth-token']
+        createdAt:
+            groups: ['auth-token']
+        user:
+            groups: ['auth-token']

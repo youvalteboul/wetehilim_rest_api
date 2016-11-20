@@ -7,3 +7,27 @@ services:
 #    service_name:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+    auth_token_user_provider:
+        class: AppBundle\Security\AuthTokenUserProvider
+        arguments: ["@auth_token_repository", "@user_repository"]
+        public:    false
+
+    auth_token_repository:
+        class:   Doctrine\ORM\EntityManager
+        factory: ["@doctrine.orm.entity_manager", "getRepository"]
+        arguments: ["AppBundle:AuthToken"]
+
+    user_repository:
+        class:   Doctrine\ORM\EntityManager
+        factory: ["@doctrine.orm.entity_manager", "getRepository"]
+        arguments: ["AppBundle:User"]
+
+    auth_token_authenticator:
+        class:     AppBundle\Security\AuthTokenAuthenticator
+        arguments: ["@security.http_utils"]
+        public:    false
+
+    app_bundle.api_doc.fos_rest_form_errors_parser:
+        class: Component\ApiDoc\Parser\FOSRestFormErrorsParser
+        tags:
+            - { name: nelmio_api_doc.extractor.parser, priority: 1 }

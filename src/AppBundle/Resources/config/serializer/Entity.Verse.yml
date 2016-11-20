@@ -1,0 +1,19 @@
+AppBundle\Entity\Verse:
+    exclusion_policy: none
+    properties:
+        id:
+            groups: ['psalm', 'verse']
+        number:
+            groups: ['psalm', 'verse']
+        numberHebrew:
+            groups: ['psalm', 'verse']
+        verse:
+            groups: ['psalm', 'verse']
+        verseFrench:
+            groups: ['psalm', 'verse']
+        versePhonetic:
+            groups: ['psalm', 'verse']
+        comment:
+            groups: ['psalm', 'verse']
+        psalm:
+            groups: ['verse']

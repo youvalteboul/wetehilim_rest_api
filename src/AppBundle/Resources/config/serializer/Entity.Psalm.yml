@@ -1,0 +1,21 @@
+AppBundle\Entity\Psalm:
+    exclusion_policy: none
+    properties:
+        id:
+            groups: ['psalm', 'verse']
+        number:
+            groups: ['psalm', 'verse']
+        numberHebrew:
+            groups: ['psalm', 'verse']
+        meaning:
+            groups: ['psalm', 'verse']
+        timing:
+            groups: ['psalm', 'verse']
+        readingDay:
+            groups: ['psalm', 'verse']
+        theme:
+            groups: ['psalm', 'verse']
+        tags:
+            groups: ['psalm', 'verse']
+        verses:
+            groups: ['psalm']
